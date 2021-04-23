@@ -1,0 +1,296 @@
+@import "colors.css";
+@import "utilities.css";
+@import "side.css";
+@import "nav.css";
+@import "player.css";
+
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* General Styling */
+body {
+  background-image: linear-gradient(0deg, #000, #355155);
+  background-attachment: fixed;
+}
+
+a {
+  text-decoration: none;
+  color: var(--a-color);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Main page */
+#logo {
+  display: block;
+  width: 145px;
+  margin: 0 0 50px 25px;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+/* Main-content */
+.inner-container {
+  padding-bottom: 110px;
+}
+
+.row-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.see-all {
+  position: relative;
+  flex: 1;
+}
+
+.see-all a {
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+  text-transform: uppercase;
+  right: 10px;
+}
+
+.row-header h2 {
+  font-weight: 24px;
+  font-weight: bold;
+  color: var(--btn-white-bg);
+}
+
+.row-header p {
+  font-size: 16px;
+  color: var(--circle-color);
+}
+
+.cover-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.card-click {
+  width: 220px;
+  height: 250px;
+}
+
+.card {
+  height: 250px;
+  width: 220px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-main-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@supports (
+  (backdrop-filter: blur(60px)) or (-webkit-backdrop-filter: blur(60px))
+) {
+  .backdrop::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(60px);
+    transition: background 0.4s ease;
+  }
+
+  .card:hover .backdrop::before {
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+
+@supports not (
+  (backdrop-filter: blur(60px)) or (-webkit-backdrop-filter: blur(60px))
+) {
+  .backdrop::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #181818;
+    transition: background 0.4s ease;
+  }
+
+  .card:hover .backdrop::before {
+    background: #1d1d1d;
+  }
+}
+
+.card-main-content * {
+  z-index: 1;
+}
+
+.card-img-wrap {
+  width: 180px;
+  height: 170px;
+  border-radius: 10px;
+  position: relative;
+  margin: 15px auto;
+  overflow: hidden;
+}
+
+.card-symbol {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 10px;
+  left: 10px;
+  opacity: 0.5;
+}
+
+#playsong {
+  position: absolute;
+  font-size: 14px;
+  bottom: 5px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--normal);
+  background: var(--bar-color);
+  opacity: 0;
+  transition: all 0.3s ease;
+  -webkit-box-shadow: -1px 12px 26px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: -1px 12px 26px 8px rgba(0, 0, 0, 0.2);
+  cursor: default;
+}
+
+#playsong:hover {
+  transform: scale(1.05);
+}
+
+.card:hover #playsong {
+  opacity: 1;
+  bottom: 10px;
+}
+
+.card-info {
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.card-artist-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--btn-white-bg);
+}
+
+.card-song-name {
+  color: var(--btn-white-bg);
+  font-weight: 300;
+}
+
+/* Player */
+
+/* Message */
+#message {
+  width: 350px;
+  position: fixed;
+
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 10;
+  top: 10px;
+}
+
+.normal {
+  background: var(--normal);
+  color: var(--player-bg);
+}
+
+.danger {
+  background: var(--danger);
+  color: var(--normal);
+}
+
+.success {
+  background: var(--success);
+  color: var(--normal);
+}
+
+.warning {
+  background: var(--warning);
+  color: var(--normal);
+}
+
+.fadein {
+  animation: fade-in 0.4s forwards ease;
+}
+
+@keyframes fade-in {
+  from {
+    top: -100px;
+    opacity: 0;
+  }
+  to {
+    top: 10px;
+    opacity: 1;
+  }
+}
+
+.fadeout {
+  animation: fade-out 0.4s forwards ease;
+}
+
+@keyframes fade-out {
+  from {
+    top: 10px;
+    opacity: 1;
+  }
+  to {
+    top: -100px;
+    opacity: 0;
+  }
+}

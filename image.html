@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <style>
+      img {
+        display: block;
+        width: 400px;
+        margin-bottom: 20px;
+      }
+
+      .output {
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="person" src="images/8.jpg" />
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+  <script>
+    const colorThief = new ColorThief();
+    const img = document.querySelector("img");
+    const out = document.querySelector(".output");
+    let color = {};
+
+    // Make sure image is finished loading
+    if (img.complete) {
+      color = colorThief.getPalette(img)[2];
+      // out.style.background = `rgb(${color[0]},${color[1]},${color[2]})`;
+
+      console.log(color);
+    } else {
+      window.addEventListener("load", function () {
+        color = colorThief.getPalette(img)[2];
+
+        document.body.style.background = `rgb(${color[0]},${color[1]},${color[2]})`;
+      });
+    }
+  </script>
+</html>

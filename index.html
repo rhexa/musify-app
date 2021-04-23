@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Music Streaming Website" />
+    <meta name="keywords" content="music, streaming, music streaming" />
+    <meta
+      name="author"
+      content="Cihan Erenler, Daniel Kovacs, Rachmad Fauzan"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Musify</title>
+    <link
+      rel="shortcut icon"
+      href="images/symbol-green.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <!-- Container starts here -->
+    <div class="container">
+      <!-- Side starts here -->
+      <side id="side">
+        <div class="side-content">
+          <div class="logo-wrap">
+            <a id="logo" href="#"><img src="images/Logo.svg" alt="logo" /></a>
+          </div>
+          <ul>
+            <li class="active">
+              <div class="side-group">
+                <a href=""><i class="fas fa-home"></i>Home</a>
+              </div>
+            </li>
+            <li>
+              <div class="side-group">
+                <a href=""><i class="fas fa-search"></i>Search</a>
+              </div>
+            </li>
+            <li>
+              <div class="side-group">
+                <a href=""><i class="fas fa-book-open"></i>Library</a>
+              </div>
+            </li>
+            <li>
+              <div class="side-group liked-songs-wrap">
+                <a class="liked-songs" href="javascript:void(0)"
+                  ><i class="fas fa-heart"></i>Liked Songs</a
+                >
+              </div>
+            </li>
+            <li>
+              <div class="side-group">
+                <a href=""><i class="fas fa-plus"></i>Create Playlist</a>
+              </div>
+            </li>
+          </ul>
+          <hr />
+          <h3 class="playlists-title">Playlists</h3>
+        </div>
+      </side>
+      <!-- Side ends here -->
+
+      <!-- Main area starts here -->
+      <main id="main-area" class="main-area">
+        <!-- Main nav starts -->
+        <nav class="main-navbar">
+          <div class="main-container flex-right">
+            <div class="btn-group">
+              <a href="#" class="btn btn-signup">Sign up</a>
+              <a href="login.html" class="btn btn-white">Log in</a>
+            </div>
+          </div>
+        </nav>
+        <!-- Main nav ends -->
+
+        <!-- Category nav starts -->
+        <nav class="category-navbar">
+          <div class="category-group">
+            <ul class="category-list">
+              <li><a class="featured category-active" href="#">featured</a></li>
+              <li><a class="genres" href="#">genres</a></li>
+              <li><a class="releases" href="#">new releases</a></li>
+              <div class="underline"></div>
+            </ul>
+          </div>
+        </nav>
+        <!-- Category nav ends -->
+        <div class="show-area">
+          <div class="inner-container main-container p-y-3">
+            <div class="row-header">
+              <div class="row-header-title">
+                <h2>Recommended for you</h2>
+                <p>Based on your taste</p>
+              </div>
+              <div class="see-all">
+                <a href="#">see all</a>
+              </div>
+            </div>
+
+            <div class="cover-row">
+              <a class="card-click" href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/1.jpg" alt="1" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/1.jpg" alt="1" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/3.jpg" alt="1" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/3.jpg" alt="3" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/8.jpg" alt="1" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/8.jpg" alt="8" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/9.jpg" alt="9" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/9.jpg" alt="9" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/7.jpg" alt="7" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/7.jpg" alt="7" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/11.jpg" alt="11" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/11.jpg" alt="11" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="row-header">
+              <div class="row-header-title">
+                <h2>Tranding now</h2>
+              </div>
+              <div class="see-all">
+                <a href="#">see all</a>
+              </div>
+            </div>
+            <div class="cover-row">
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/4.jpg" alt="4" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/4.jpg" alt="4" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/6.jpg" alt="6" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/6.jpg" alt="6" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/2.jpg" alt="2" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/2.jpg" alt="2" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/5.jpg" alt="5" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/5.jpg" alt="5" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/10.jpg" alt="10" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/10.jpg" alt="10" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/12.jpg" alt="12" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/12.jpg" alt="12" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="row-header">
+              <div class="row-header-title">
+                <h2>Tranding now</h2>
+              </div>
+              <div class="see-all">
+                <a href="#">see all</a>
+              </div>
+            </div>
+            <div class="cover-row">
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/4.jpg" alt="4" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/4.jpg" alt="4" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/6.jpg" alt="6" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/6.jpg" alt="6" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/2.jpg" alt="2" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/2.jpg" alt="2" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/5.jpg" alt="5" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/5.jpg" alt="5" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/10.jpg" alt="10" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/10.jpg" alt="10" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/12.jpg" alt="12" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/12.jpg" alt="12" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="row-header">
+              <div class="row-header-title">
+                <h2>Tranding now</h2>
+              </div>
+              <div class="see-all">
+                <a href="#">see all</a>
+              </div>
+            </div>
+            <div class="cover-row">
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/4.jpg" alt="4" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/4.jpg" alt="4" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/6.jpg" alt="6" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/6.jpg" alt="6" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/2.jpg" alt="2" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/2.jpg" alt="2" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/5.jpg" alt="5" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/5.jpg" alt="5" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/10.jpg" alt="10" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/10.jpg" alt="10" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/12.jpg" alt="12" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/12.jpg" alt="12" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="row-header">
+              <div class="row-header-title">
+                <h2>Tranding now</h2>
+              </div>
+              <div class="see-all">
+                <a href="#">see all</a>
+              </div>
+            </div>
+            <div class="cover-row">
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/4.jpg" alt="4" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/4.jpg" alt="4" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/6.jpg" alt="6" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/6.jpg" alt="6" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/2.jpg" alt="2" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/2.jpg" alt="2" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/5.jpg" alt="5" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/5.jpg" alt="5" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/10.jpg" alt="10" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/10.jpg" alt="10" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/12.jpg" alt="12" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/12.jpg" alt="12" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="row-header">
+              <div class="row-header-title">
+                <h2>Tranding now</h2>
+              </div>
+              <div class="see-all">
+                <a href="#">see all</a>
+              </div>
+            </div>
+            <div class="cover-row">
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/4.jpg" alt="4" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/4.jpg" alt="4" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/6.jpg" alt="6" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/6.jpg" alt="6" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/2.jpg" alt="2" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/2.jpg" alt="2" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/5.jpg" alt="5" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/5.jpg" alt="5" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/10.jpg" alt="10" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/10.jpg" alt="10" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="javascript:void(0)">
+                <div class="card">
+                  <img src="images/12.jpg" alt="12" class="card-bg-img" />
+                  <div class="card-main-content backdrop">
+                    <div class="card-img-wrap">
+                      <img
+                        class="card-symbol"
+                        src="images/Symbol.png"
+                        alt="Symbol"
+                      />
+                      <img src="images/12.jpg" alt="12" />
+                      <i id="playsong" class="fas fa-play"></i>
+                    </div>
+                    <div class="card-info">
+                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-song-name">I am awesome</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- Main ends here -->
+    </div>
+    <!-- Container ends here -->
+
+    <div id="player">
+      <div class="artist-info">
+        <div class="artist-info-img-wrap">
+          <img
+            src="images/8.jpg"
+            alt="music-info-image"
+            class="artist-info-bg"
+          />
+        </div>
+        <div class="artist-info-inner">
+          <div class="artist-info-inner-img-wrap">
+            <img src="images/8.jpg" alt="emily" />
+          </div>
+          <div class="artist-song-info">
+            <h4 class="artist-name">Emily</h4>
+            <p class="song-name">Life is awesome</p>
+          </div>
+          <a class="artist-info-liked liked" href="javascript:void(0)"
+            ><i class="fas fa-heart"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="media-part">
+        <div class="media-buttons">
+          <a class="random" href="#"><i class="fas fa-random"></i></a>
+          <div class="main-media-buttons">
+            <a href="#" class="prev"><i class="fas fa-step-backward"></i></a>
+            <a href="#" class="play"><i class="fas fa-play-circle"></i></a>
+            <a href="#" class="prev"><i class="fas fa-step-forward"></i></a>
+          </div>
+          <a href="#" class="replay">
+            <i class="fas fa-sync-alt"></i>
+          </a>
+        </div>
+        <div class="progress-part">
+          <span class="counter">01:24</span>
+          <div class="progress-bar">
+            <div class="bar"></div>
+            <div class="circle"></div>
+          </div>
+          <span class="total">03:18</span>
+        </div>
+      </div>
+
+      <div class="volume-part">
+        <a href="#"><i class="fas fa-list-ul"></i></a>
+        <a href="#" class="volume-icon">
+          <img src="images/icons/volume-full.png" alt="volume" />
+        </a>
+
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          id="myrange"
+          class="slider"
+        />
+      </div>
+    </div>
+
+    <div class="playlist-warning">
+      <h3>Enjoy your Liked Songs</h3>
+      <p>Log in to see all the songs you've liked in one playlist</p>
+      <a href="login.html" class="btn green-btn">log in</a>
+    </div>
+
+    <!-- <div id="message" class="fadein normal">Hepinizi sikerim</div> -->
+    <script src="general.js"></script>
+    <script src="home.js"></script>
+  </body>
+</html>

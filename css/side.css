@@ -1,0 +1,122 @@
+#side {
+  padding: 50px 20px;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+.side-content {
+  position: fixed;
+  width: 250px;
+  left: 25px;
+}
+
+#side ul li {
+  padding: 8px 0;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.side-group {
+  width: 80%;
+  margin: auto;
+}
+
+.playlist-warning {
+  position: fixed;
+  background: rgb(30, 70, 145);
+  background: linear-gradient(
+    90deg,
+    rgb(30, 70, 145) 0%,
+    rgb(62, 178, 201) 100%
+  );
+  border-radius: 10px;
+  color: var(--normal);
+  padding: 20px;
+  width: 300px;
+  left: 240px;
+  top: 280px;
+  z-index: 5;
+  opacity: 0;
+  display: none;
+  /* transition: all 0.4s ease; */
+  animation: pl-warning 0.3s forwards ease;
+}
+
+@keyframes pl-warning {
+  0% {
+    opacity: 0;
+    left: 260px;
+  }
+  100% {
+    opacity: 1;
+    left: 240px;
+  }
+}
+
+.playlist-warning::before {
+  position: absolute;
+  content: "";
+  right: 100%;
+  top: 20px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent rgb(30, 70, 145) transparent transparent;
+}
+
+.playlist-warning h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.playlist-warning p {
+  font-size: 14px;
+}
+
+#side ul li div a {
+  transition: all 0.5s ease;
+  font-weight: 400;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  grid-gap: 10px;
+}
+
+#side a:hover,
+#side a:hover > i {
+  color: var(--btn-white-bg);
+}
+
+#side ul li a > i {
+  color: var(--i-color);
+  font-size: 20px;
+  transition: all 0.5s ease;
+}
+
+#side ul li:last-child i {
+  width: 20px;
+  height: 20px;
+  background: var(--i-color);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--btn-black-bg);
+  font-size: 16px;
+}
+
+#side ul li:last-child div a:hover i {
+  background: var(--btn-white-bg);
+}
+
+#side hr {
+  border: 1px solid var(--hr-color);
+  margin: 20px 0 10px;
+}
+
+.playlists-title {
+  color: var(--progress-bar-color);
+  font-weight: 600;
+  font-size: 14px;
+  padding-left: 25px;
+}

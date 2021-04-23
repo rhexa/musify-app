@@ -1,0 +1,55 @@
+/* Main nav */
+.main-navbar {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+}
+
+.btn-group {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* Category nav */
+.category-navbar {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-group ul {
+  display: flex;
+  position: relative;
+}
+
+.category-group ul .underline {
+  position: absolute;
+  bottom: -7px;
+  left: 25px;
+  height: 3px;
+  width: 100px;
+  background: var(--a-hover);
+  transition: all 0.3s ease;
+}
+
+.category-group ul li {
+  min-width: 150px;
+  text-align: center;
+}
+
+.category-group ul li a {
+  text-transform: uppercase;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.category-group ul li a:hover {
+  color: var(--btn-white-bg);
+}

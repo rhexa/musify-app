@@ -1,0 +1,21 @@
+:root {
+  --a-color: #979797;
+  --a-hover: #2e8b57;
+  --i-color: #979797;
+  --btn-white-bg: #fff;
+  --btn-black-bg: #000;
+  --player-bg: #1d1d1d;
+  --progress-bar-color: #535353;
+  --bar-color: #479f4e;
+  --circle-color: #c4c4c4;
+  --hr-color: #2b2b2b;
+  --danger: #d9534f;
+  --warning: #f0ad4e;
+  --normal: #f7f7f7;
+  --success: #5cb85c;
+  --moz-card: #181818;
+  --moz-card-hover: #1d1d1d;
+  --radio-border: #b3b3b3;
+  --radio-checked: #72c972;
+  --line: rgba(151, 151, 151, 0.3);
+}

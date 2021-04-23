@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="images/symbol-green.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/login.css" />
+    <title>Sign up</title>
+  </head>
+  <body>
+    <div class="logo">
+      <a href="index.html"
+        ><img src="images/logo-black.svg" alt="logo-black"
+      /></a>
+    </div>
+    <div class="form-container">
+      <h2>Sign up for free to start listening</h2>
+      <form class="login-form">
+        <label for="username">What's your email?</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Enter your email"
+        />
+        <label for="username">Conform your email</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Enter your email again"
+        />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+        />
+        <label for="username">What should we call you?</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Enter a profile name"
+        />
+
+        <label for="username">Date of birth</label>
+        <div class="date-of-birth">
+          <label class="month-label" for="months">
+            Month
+            <select name="months" id="months">
+              <option selected disabled value>Month</option>
+              <option value="Jenuary">Jenuary</option>
+              <option value="February">February</option>
+              <option value="March">March</option>
+              <option value="April">April</option>
+              <option value="May">May</option>
+              <option value="Jun">Jun</option>
+              <option value="July">July</option>
+              <option value="August">August</option>
+              <option value="September">September</option>
+              <option value="October">October</option>
+              <option value="November">November</option>
+              <option value="December">December</option>
+            </select>
+          </label>
+          <label for="date" class="month-label">
+            Date
+            <input type="text" name="date" id="date" placeholder="DD" />
+          </label>
+          <label for="year" class="month-label">
+            Year
+            <input type="text" name="year" id="year" placeholder="YYYY" />
+          </label>
+        </div>
+        <label for="password">What's your gender?</label>
+        <div class="gender">
+          <label for="male" class="gender-group">
+            <input type="radio" name="gender" value="male" id="male" />
+            <div class="custom-radio"></div>
+            Male
+          </label>
+          <label for="female" class="gender-group">
+            <input type="radio" name="gender" value="female" id="female" />
+            <div class="custom-radio"></div>
+            Female
+          </label>
+          <label for="non-binary" class="gender-group">
+            <input
+              type="radio"
+              name="gender"
+              value="non-binary"
+              id="non-binary"
+            />
+            <div class="custom-radio"></div>
+            Non-binary
+          </label>
+        </div>
+
+        <button type="submit" class="btn green-btn btn-login">Sign up</button>
+      </form>
+      <div class="have-account">
+        <p>You have an account? <a href="login.html">Login</a></p>
+      </div>
+    </div>
+  </body>
+</html>

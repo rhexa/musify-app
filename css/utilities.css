@@ -1,0 +1,96 @@
+.main-container {
+  max-width: 1500px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.flex-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.p-y-1 {
+  padding: 10px 20px;
+}
+.p-y-2 {
+  padding: 20px 20px;
+}
+.p-y-3 {
+  padding: 30px 20px;
+}
+.p-y-4 {
+  padding: 40px 20px;
+}
+.p-y-5 {
+  padding: 50px 20px;
+}
+
+.btn {
+  min-width: 140px;
+  height: 40px;
+  border: none;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.green-btn {
+  background: var(--success);
+  width: 150px;
+  float: right;
+  margin-top: 10px;
+  color: var(--btn-white-bg);
+  font-weight: 400;
+}
+
+.btn-login {
+  color: var(--hr-color);
+}
+
+.btn:hover {
+  transform: scale(1.04);
+}
+
+.btn-white {
+  color: var(--btn-black-bg);
+  background: var(--btn-white-bg);
+}
+
+.btn-white:hover {
+  color: var(--btn-white-bg);
+  background: var(--btn-black-bg);
+}
+
+.btn-border {
+  border: 2px solid var(--btn-black-bg);
+}
+
+.btn-signup {
+  color: var(--btn-white-bg);
+}
+
+.active {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.active div > a {
+  font-weight: 800 !important;
+}
+
+.active div > a,
+.active div > a > i {
+  color: var(--btn-white-bg) !important;
+}
+
+.category-active {
+  color: var(--btn-white-bg);
+}
