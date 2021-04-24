@@ -94,3 +94,39 @@
 .category-active {
   color: var(--btn-white-bg);
 }
+
+.label {
+  color: var(--circle-color);
+  text-transform: uppercase;
+}
+
+/* Row header */
+
+.row-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.see-all {
+  position: relative;
+  flex: 1;
+}
+
+.see-all a {
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+  text-transform: uppercase;
+  right: 10px;
+}
+
+.row-header h2 {
+  font-weight: 24px;
+  font-weight: bold;
+  color: var(--btn-white-bg);
+}
+
+.row-header p {
+  font-size: 16px;
+  color: var(--circle-color);
+}

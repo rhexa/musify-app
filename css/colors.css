@@ -19,4 +19,8 @@
   --radio-checked: #72c972;
   --line: rgba(151, 151, 151, 0.3);
   --btn-green: #2aaf2a;
+  --btn-green-hover: #3c943c;
+  --dark-bg: #2c2c2c;
+  --dark-bg-l: #1d1d1d;
+  --dark-bg-l-hover: #1b1b1b;
 }

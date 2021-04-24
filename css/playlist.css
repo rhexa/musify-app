@@ -27,16 +27,11 @@
   border-radius: 5px;
   overflow: hidden;
   -webkit-box-shadow: 1px 0px 31px -13px #000000;
-  box-shadow: 1px 0px 31px -13px #000000;
+  box-shadow: 1px 0px 21px -13px #000000;
 }
 
 .playlist-info {
   padding: 50px 20px 20px;
-}
-
-.playlist-info .label {
-  color: var(--circle-color);
-  text-transform: uppercase;
 }
 
 .playlist-name {
@@ -226,7 +221,7 @@
   position: absolute;
   width: 180px;
   right: 20%;
-  bottom: -140px;
+  bottom: -130px;
   background: #222;
   padding: 0 2px;
   border-radius: 5px;
@@ -275,7 +270,6 @@
   display: block;
   padding: 4px 10px;
   margin: 5px 0;
-  font-size: 18px;
   color: aliceblue;
   border-radius: 5px;
 }
@@ -313,7 +307,7 @@
   justify-content: center;
 }
 
-.bar {
+.ani-bar {
   width: 3px;
   height: 25px;
   background: green;
@@ -400,7 +394,7 @@
   z-index: 15;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .liked-playlist-warning-show {
