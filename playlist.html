@@ -37,7 +37,7 @@
           <ul>
             <li class="active">
               <div class="side-group">
-                <a href="index.html"><i class="fas fa-home"></i>Home</a>
+                <a href=""><i class="fas fa-home"></i>Home</a>
               </div>
             </li>
             <li>
@@ -59,7 +59,9 @@
             </li>
             <li>
               <div class="side-group">
-                <a href=""><i class="fas fa-plus"></i>Create Playlist</a>
+                <a href="javascript:void(0)" class="create-playlist-btn"
+                  ><i class="fas fa-plus"></i>Create Playlist</a
+                >
               </div>
             </li>
           </ul>
@@ -87,7 +89,7 @@
           <section class="playlist-info-sec">
             <div class="main-container playlist-container">
               <div class="playlist-img-wrap">
-                <img src="images/7.jpg" alt="cover" />
+                <img src="images/15.jpg" alt="cover" />
               </div>
               <div class="playlist-info">
                 <div class="label">Playlist</div>
@@ -116,9 +118,6 @@
                     <a href="#" class="like-playlist">
                       <i class="fas fa-heart"></i>
                     </a>
-                    <a href="#" class="playlist-more">
-                      <i class="fas fa-ellipsis-h"></i>
-                    </a>
                   </div>
                 </div>
               </div>
@@ -132,6 +131,7 @@
               <p class="playlist-play-label"></p>
               <p class="playlist-index-label">#</p>
               <p class="playlist-title-label">Title</p>
+              <p class="playlist-playing-label"></p>
               <p class="playlist-album-label">Album</p>
               <p class="playlist-date-added-label">Date added</p>
               <p class="playlist-liked-label"></p>
@@ -150,19 +150,72 @@
                   <div class="playlist-song-index">1</div>
                   <div class="playlist-song-info">
                     <div class="playlist-song-info-img-wrap">
-                      <img src="images/1.jpg" alt="song" />
+                      <img src="images/12.jpg" alt="song" />
                     </div>
                     <div class=".playlist-song-info-right">
-                      <h4 class="playlist-song-name">Sizi sikerim</h4>
-                      <h4 class="playlist-song-artist-name">Musti</h4>
+                      <h4 class="playlist-song-name">
+                        I had died when I was born
+                      </h4>
+                      <h4 class="playlist-song-artist-name">Lonely Girl</h4>
                     </div>
                   </div>
-                  <div class="playlist-song-album">Im gonna fuck you up</div>
+                  <div class="playing-animation">
+                    <div class="playing-container">
+                      <div class="bar bar-1"></div>
+                      <div class="bar bar-2"></div>
+                      <div class="bar bar-3"></div>
+                      <div class="bar bar-4"></div>
+                      <div class="bar bar-5"></div>
+                    </div>
+                  </div>
+                  <div class="playlist-song-album">Lonely People's Club</div>
                   <div class="playlist-song-added-date">2 days ago</div>
                   <div class="playlist-song-like-icon">
                     <i class="fas fa-heart"></i>
                   </div>
                   <div class="playlist-song-length">2:54</div>
+                  <div class="song-more-button">
+                    <a href="#" class="playlist-song-more">
+                      <i class="fas fa-ellipsis-h"></i>
+                    </a>
+                    <div class="song-more-options">
+                      <ul>
+                        <li>
+                          <a class="song-more-option" href="#">Add to queue</a>
+                        </li>
+                        <li>
+                          <a class="song-more-option" href="#">Go to artist</a>
+                        </li>
+                        <li>
+                          <a class="song-more-option" href="#">Go to album</a>
+                        </li>
+                        <li>
+                          <a class="add-to-playlist song-more-option" href="#"
+                            >Add to playlist
+                            <i class="fas fa-caret-right"></i>
+                          </a>
+                          <ul>
+                            <li>
+                              <a class="song-more-option-op" href="#"
+                                >Playlist#1</a
+                              >
+                            </li>
+                            <li>
+                              <a class="song-more-option-op" href="#"
+                                >Playlist#2</a
+                              >
+                            </li>
+                            <li>
+                              <a class="song-more-option-op" href="#"
+                                >Playlist#3</a
+                              >
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <div class="playlist-song-playerlist"></div>
+                    </div>
+                  </div>
                 </div>
               </section>
 
@@ -171,22 +224,73 @@
                   <div class="playlist-song-play-btn">
                     <i class="fas fa-play"></i>
                   </div>
-                  <div class="playlist-song-index">1</div>
+                  <div class="playlist-song-index">2</div>
                   <div class="playlist-song-info">
                     <div class="playlist-song-info-img-wrap">
-                      <img src="images/1.jpg" alt="song" />
+                      <img src="images/16.jpg" alt="song" />
                     </div>
                     <div class=".playlist-song-info-right">
-                      <h4 class="playlist-song-name">Sizi sikerim</h4>
-                      <h4 class="playlist-song-artist-name">Musti</h4>
+                      <h4 class="playlist-song-name">I have sun in my ass</h4>
+                      <h4 class="playlist-song-artist-name">Sunsun</h4>
                     </div>
                   </div>
-                  <div class="playlist-song-album">Im gonna fuck you up</div>
+                  <div class="playing-animation">
+                    <div class="playing-container">
+                      <div class="bar bar-1"></div>
+                      <div class="bar bar-2"></div>
+                      <div class="bar bar-3"></div>
+                      <div class="bar bar-4"></div>
+                      <div class="bar bar-5"></div>
+                    </div>
+                  </div>
+                  <div class="playlist-song-album">Shiny ass</div>
                   <div class="playlist-song-added-date">2 days ago</div>
                   <div class="playlist-song-like-icon">
                     <i class="fas fa-heart"></i>
                   </div>
                   <div class="playlist-song-length">2:54</div>
+                  <div class="song-more-button">
+                    <a href="#" class="playlist-song-more">
+                      <i class="fas fa-ellipsis-h"></i>
+                    </a>
+                    <div class="song-more-options">
+                      <ul>
+                        <li>
+                          <a class="song-more-option" href="#">Add to queue</a>
+                        </li>
+                        <li>
+                          <a class="song-more-option" href="#">Go to artist</a>
+                        </li>
+                        <li>
+                          <a class="song-more-option" href="#">Go to album</a>
+                        </li>
+                        <li>
+                          <a class="add-to-playlist song-more-option" href="#"
+                            >Add to playlist
+                            <i class="fas fa-caret-right"></i>
+                          </a>
+                          <ul>
+                            <li>
+                              <a class="song-more-option-op" href="#"
+                                >Playlist#1</a
+                              >
+                            </li>
+                            <li>
+                              <a class="song-more-option-op" href="#"
+                                >Playlist#2</a
+                              >
+                            </li>
+                            <li>
+                              <a class="song-more-option-op" href="#"
+                                >Playlist#3</a
+                              >
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <div class="playlist-song-playerlist"></div>
+                    </div>
+                  </div>
                 </div>
               </section>
 
@@ -195,14 +299,23 @@
                   <div class="playlist-song-play-btn">
                     <i class="fas fa-play"></i>
                   </div>
-                  <div class="playlist-song-index">1</div>
+                  <div class="playlist-song-index">3</div>
                   <div class="playlist-song-info">
                     <div class="playlist-song-info-img-wrap">
-                      <img src="images/1.jpg" alt="song" />
+                      <img src="images/14.jpg" alt="song" />
                     </div>
                     <div class=".playlist-song-info-right">
                       <h4 class="playlist-song-name">Sizi sikerim</h4>
                       <h4 class="playlist-song-artist-name">Musti</h4>
+                    </div>
+                  </div>
+                  <div class="playing-animation">
+                    <div class="playing-container">
+                      <div class="bar bar-1"></div>
+                      <div class="bar bar-2"></div>
+                      <div class="bar bar-3"></div>
+                      <div class="bar bar-4"></div>
+                      <div class="bar bar-5"></div>
                     </div>
                   </div>
                   <div class="playlist-song-album">Im gonna fuck you up</div>
@@ -211,6 +324,48 @@
                     <i class="fas fa-heart"></i>
                   </div>
                   <div class="playlist-song-length">2:54</div>
+                  <div class="song-more-button">
+                    <a href="#" class="playlist-song-more">
+                      <i class="fas fa-ellipsis-h"></i>
+                    </a>
+                    <div class="song-more-options">
+                      <ul>
+                        <li>
+                          <a class="song-more-option" href="#">Add to queue</a>
+                        </li>
+                        <li>
+                          <a class="song-more-option" href="#">Go to artist</a>
+                        </li>
+                        <li>
+                          <a class="song-more-option" href="#">Go to album</a>
+                        </li>
+                        <li>
+                          <a class="add-to-playlist song-more-option" href="#"
+                            >Add to playlist
+                            <i class="fas fa-caret-right"></i>
+                          </a>
+                          <ul>
+                            <li>
+                              <a class="song-more-option-op" href="#"
+                                >Playlist#1</a
+                              >
+                            </li>
+                            <li>
+                              <a class="song-more-option-op" href="#"
+                                >Playlist#2</a
+                              >
+                            </li>
+                            <li>
+                              <a class="song-more-option-op" href="#"
+                                >Playlist#3</a
+                              >
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <div class="playlist-song-playerlist"></div>
+                    </div>
+                  </div>
                 </div>
               </section>
 
@@ -219,14 +374,23 @@
                   <div class="playlist-song-play-btn">
                     <i class="fas fa-play"></i>
                   </div>
-                  <div class="playlist-song-index">1</div>
+                  <div class="playlist-song-index">4</div>
                   <div class="playlist-song-info">
                     <div class="playlist-song-info-img-wrap">
-                      <img src="images/1.jpg" alt="song" />
+                      <img src="images/13.jpg" alt="song" />
                     </div>
                     <div class=".playlist-song-info-right">
                       <h4 class="playlist-song-name">Sizi sikerim</h4>
                       <h4 class="playlist-song-artist-name">Musti</h4>
+                    </div>
+                  </div>
+                  <div class="playing-animation">
+                    <div class="playing-container">
+                      <div class="bar bar-1"></div>
+                      <div class="bar bar-2"></div>
+                      <div class="bar bar-3"></div>
+                      <div class="bar bar-4"></div>
+                      <div class="bar bar-5"></div>
                     </div>
                   </div>
                   <div class="playlist-song-album">Im gonna fuck you up</div>
@@ -235,30 +399,48 @@
                     <i class="fas fa-heart"></i>
                   </div>
                   <div class="playlist-song-length">2:54</div>
-                </div>
-              </section>
-
-              <section class="playlist-song">
-                <div class="inner-song">
-                  <div class="playlist-song-play-btn">
-                    <i class="fas fa-play"></i>
-                  </div>
-                  <div class="playlist-song-index">1</div>
-                  <div class="playlist-song-info">
-                    <div class="playlist-song-info-img-wrap">
-                      <img src="images/1.jpg" alt="song" />
+                  <div class="song-more-button">
+                    <a href="#" class="playlist-song-more">
+                      <i class="fas fa-ellipsis-h"></i>
+                    </a>
+                    <div class="song-more-options">
+                      <ul>
+                        <li>
+                          <a class="song-more-option" href="#">Add to queue</a>
+                        </li>
+                        <li>
+                          <a class="song-more-option" href="#">Go to artist</a>
+                        </li>
+                        <li>
+                          <a class="song-more-option" href="#">Go to album</a>
+                        </li>
+                        <li>
+                          <a class="add-to-playlist song-more-option" href="#"
+                            >Add to playlist
+                            <i class="fas fa-caret-right"></i>
+                          </a>
+                          <ul>
+                            <li>
+                              <a class="song-more-option-op" href="#"
+                                >Playlist#1</a
+                              >
+                            </li>
+                            <li>
+                              <a class="song-more-option-op" href="#"
+                                >Playlist#2</a
+                              >
+                            </li>
+                            <li>
+                              <a class="song-more-option-op" href="#"
+                                >Playlist#3</a
+                              >
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <div class="playlist-song-playerlist"></div>
                     </div>
-                    <div class=".playlist-song-info-right">
-                      <h4 class="playlist-song-name">Sizi sikerim</h4>
-                      <h4 class="playlist-song-artist-name">Musti</h4>
-                    </div>
                   </div>
-                  <div class="playlist-song-album">Im gonna fuck you up</div>
-                  <div class="playlist-song-added-date">2 days ago</div>
-                  <div class="playlist-song-like-icon">
-                    <i class="fas fa-heart"></i>
-                  </div>
-                  <div class="playlist-song-length">2:54</div>
                 </div>
               </section>
             </section>
@@ -337,7 +519,29 @@
       <a href="login.html" class="btn green-btn">log in</a>
     </div>
 
+    <div class="liked-playlist-warning">
+      <div class="liked-playlist-warning-card">
+        <div class="liked-playlist-warning-card-left">
+          <div class="liked-playlist-warning-img-wrap">
+            <img src="images/15.jpg" alt="cover" />
+          </div>
+        </div>
+        <div class="liked-playlist-warning-card-right">
+          <h2>Start listening with a free Musify account</h2>
+          <a href="signup.html" class="btn green-btn">sign up free</a>
+          <p>Already have an account? <a href="login.html">LOG IN</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="create-list-warning">
+      <h3>Create a playlist</h3>
+      <p>Log in to create and share playlist.</p>
+      <a href="login.html" class="btn green-btn">log in</a>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+    <script src="utilityFunctions.js"></script>
     <script src="playlist.js"></script>
     <script src="general.js"></script>
     <script src="colorthief.js"></script>

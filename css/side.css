@@ -22,6 +22,56 @@
   width: 80%;
   margin: auto;
 }
+.create-list-warning {
+  position: fixed;
+  background: rgb(30, 70, 145);
+  background: linear-gradient(
+    90deg,
+    rgb(30, 70, 145) 0%,
+    rgb(62, 178, 201) 100%
+  );
+  border-radius: 10px;
+  color: var(--normal);
+  padding: 20px;
+  width: 300px;
+  left: 240px;
+  top: 330px;
+  z-index: 5;
+  opacity: 0;
+  display: none;
+  /* transition: all 0.4s ease; */
+  animation: pl-create-warning 0.3s forwards ease;
+}
+
+@keyframes pl-create-warning {
+  0% {
+    opacity: 0;
+    left: 260px;
+  }
+  100% {
+    opacity: 1;
+    left: 240px;
+  }
+}
+
+.create-list-warning::before {
+  position: absolute;
+  content: "";
+  right: 100%;
+  top: 20px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent rgb(30, 70, 145) transparent transparent;
+}
+
+.create-list-warning h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.create-list-warning p {
+  font-size: 14px;
+}
 
 .playlist-warning {
   position: fixed;

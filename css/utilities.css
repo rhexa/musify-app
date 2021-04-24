@@ -44,7 +44,7 @@
 }
 
 .green-btn {
-  background: var(--success);
+  background: var(--btn-green);
   width: 150px;
   float: right;
   margin-top: 10px;

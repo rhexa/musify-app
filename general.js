@@ -3,7 +3,7 @@ const volicon = document.querySelector(".volume-icon img");
 const featured = document.querySelector(".featured");
 const genres = document.querySelector(".genres");
 const releases = document.querySelector(".releases");
-const categoryGroup = document.querySelector(".category-group");
+
 const categoryList = document.querySelector(".category-list");
 const underline = document.querySelector(".underline");
 const play = document.querySelector(".play");
@@ -12,7 +12,12 @@ const liked = document.querySelector(".liked");
 const cardClick = document.querySelector(".card-click");
 // const playSong = document.getElementById("playsong");
 const likedSongs = document.querySelector(".liked-songs");
+const createPlaylist = document.querySelector(".create-playlist-btn");
+const createPlaylistWarning = document.querySelector(".create-list-warning");
 const playlistWarning = document.querySelector(".playlist-warning");
+
+// Objects
+const message = new Message();
 
 // Functions
 function arrange() {
@@ -48,24 +53,6 @@ function removeUderline() {
   });
 }
 
-function showMessage(type, text) {
-  let div = document.createElement("DIV");
-  div.id = "message";
-  div.className = `${type} fadein`;
-  div.appendChild(document.createTextNode(text));
-
-  document.body.appendChild(div);
-
-  setTimeout(() => {
-    document.getElementById("message").classList.add("fadeout");
-    document.getElementById("message").classList.remove("fadein");
-  }, 3000);
-
-  setTimeout(() => {
-    document.getElementById("message").remove();
-  }, 3400);
-}
-
 // Event listeners
 
 range.addEventListener("mouseup", () => {
@@ -82,46 +69,24 @@ window.onload = () => {
   arrangeIcon();
 };
 
-// categoryGroup.addEventListener("click", (e) => {
-//   if (e.target.classList.contains("featured")) {
-//     underline.style.left = "25px";
-//     if (!featured.classList.contains("category-active")) {
-//       removeUderline();
-//       featured.classList.add("category-active");
-//     }
-//   }
-
-//   if (e.target.classList.contains("genres")) {
-//     underline.style.left = "175px";
-//     if (!genres.classList.contains("category-active")) {
-//       removeUderline();
-//       genres.classList.add("category-active");
-//     }
-//   }
-
-//   if (e.target.classList.contains("releases")) {
-//     underline.style.left = "325px";
-//     if (!releases.classList.contains("category-active")) {
-//       removeUderline();
-//       releases.classList.add("category-active");
-//     }
-//   }
-// });
-
-// liked.addEventListener("click", () => {
-//   if (!liked.classList.contains("likedit")) {
-//     liked.classList.add("likedit");
-//     showMessage("normal", "Song added to liked songs list");
-//   } else {
-//     liked.classList.remove("likedit");
-//     showMessage("normal", "Song removed from liked songs list");
-//   }
-// });
+liked.addEventListener("click", () => {
+  if (!liked.classList.contains("likedit")) {
+    liked.classList.add("likedit");
+    message.showMessage("normal", "Song added to liked songs list");
+  } else {
+    liked.classList.remove("likedit");
+    message.showMessage("normal", "Song removed from liked songs list");
+  }
+});
 
 // playSong.addEventListener("click", (e) => {
 //   e.stopPropagation();
 //   console.log("playsong");
 // });
+
+createPlaylist.addEventListener("click", () => {
+  createPlaylistWarning.style.display = "block";
+});
 
 likedSongs.addEventListener("click", () => {
   playlistWarning.style.display = "block";
@@ -134,6 +99,15 @@ window.addEventListener("click", (e) => {
   ) {
     if (window.getComputedStyle(playlistWarning).display === "block") {
       playlistWarning.style.display = "none";
+    }
+  }
+
+  if (
+    !e.target.classList.contains("create-list-warning") &&
+    !e.target.classList.contains("create-playlist-btn")
+  ) {
+    if (window.getComputedStyle(createPlaylistWarning).display === "block") {
+      createPlaylistWarning.style.display = "none";
     }
   }
 });

@@ -275,7 +275,7 @@ ul {
     opacity: 0;
   }
   to {
-    top: 10px;
+    top: 20px;
     opacity: 1;
   }
 }
@@ -286,7 +286,7 @@ ul {
 
 @keyframes fade-out {
   from {
-    top: 10px;
+    top: 20px;
     opacity: 1;
   }
   to {
