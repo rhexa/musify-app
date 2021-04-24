@@ -161,11 +161,11 @@
                   </div>
                   <div class="playing-animation">
                     <div class="playing-container">
-                      <div class="bar bar-1"></div>
-                      <div class="bar bar-2"></div>
-                      <div class="bar bar-3"></div>
-                      <div class="bar bar-4"></div>
-                      <div class="bar bar-5"></div>
+                      <div class="ani-bar bar-1"></div>
+                      <div class="ani-bar bar-2"></div>
+                      <div class="ani-bar bar-3"></div>
+                      <div class="ani-bar bar-4"></div>
+                      <div class="ani-bar bar-5"></div>
                     </div>
                   </div>
                   <div class="playlist-song-album">Lonely People's Club</div>
@@ -236,11 +236,11 @@
                   </div>
                   <div class="playing-animation">
                     <div class="playing-container">
-                      <div class="bar bar-1"></div>
-                      <div class="bar bar-2"></div>
-                      <div class="bar bar-3"></div>
-                      <div class="bar bar-4"></div>
-                      <div class="bar bar-5"></div>
+                      <div class="ani-bar bar-1"></div>
+                      <div class="ani-bar bar-2"></div>
+                      <div class="ani-bar bar-3"></div>
+                      <div class="ani-bar bar-4"></div>
+                      <div class="ani-bar bar-5"></div>
                     </div>
                   </div>
                   <div class="playlist-song-album">Shiny ass</div>
@@ -311,11 +311,11 @@
                   </div>
                   <div class="playing-animation">
                     <div class="playing-container">
-                      <div class="bar bar-1"></div>
-                      <div class="bar bar-2"></div>
-                      <div class="bar bar-3"></div>
-                      <div class="bar bar-4"></div>
-                      <div class="bar bar-5"></div>
+                      <div class="ani-bar bar-1"></div>
+                      <div class="ani-bar bar-2"></div>
+                      <div class="ani-bar bar-3"></div>
+                      <div class="ani-bar bar-4"></div>
+                      <div class="ani-bar bar-5"></div>
                     </div>
                   </div>
                   <div class="playlist-song-album">Im gonna fuck you up</div>
@@ -386,11 +386,11 @@
                   </div>
                   <div class="playing-animation">
                     <div class="playing-container">
-                      <div class="bar bar-1"></div>
-                      <div class="bar bar-2"></div>
-                      <div class="bar bar-3"></div>
-                      <div class="bar bar-4"></div>
-                      <div class="bar bar-5"></div>
+                      <div class="ani-bar bar-1"></div>
+                      <div class="ani-bar bar-2"></div>
+                      <div class="ani-bar bar-3"></div>
+                      <div class="ani-bar bar-4"></div>
+                      <div class="ani-bar bar-5"></div>
                     </div>
                   </div>
                   <div class="playlist-song-album">Im gonna fuck you up</div>
@@ -452,7 +452,7 @@
     </section>
     <!-- Container ends here -->
 
-    <section id="player">
+    <div id="player">
       <div class="artist-info">
         <div class="artist-info-img-wrap">
           <img
@@ -477,16 +477,19 @@
 
       <div class="media-part">
         <div class="media-buttons">
-          <a class="random" href="#"><i class="fas fa-random"></i></a>
+          <button class="random" href="#"><i class="fas fa-random"></i></button>
           <div class="main-media-buttons">
-            <a href="#" class="prev"><i class="fas fa-step-backward"></i></a>
-            <a href="#" class="play"><i class="fas fa-play-circle"></i></a>
-            <a href="#" class="prev"><i class="fas fa-step-forward"></i></a>
+            <button href="#" class="prev">
+              <i class="fas fa-step-backward"></i>
+            </button>
+            <button class="play"><i class="fas fa-play-circle"></i></button>
+            <button class="next"><i class="fas fa-step-forward"></i></button>
           </div>
-          <a href="#" class="replay">
+          <button href="#" class="replay">
             <i class="fas fa-sync-alt"></i>
-          </a>
+          </button>
         </div>
+        <audio id="music" class="music" src="musics/1.mp3"></audio>
         <div class="progress-part">
           <span class="counter">01:24</span>
           <div class="progress-bar">
@@ -502,6 +505,7 @@
         <a href="#" class="volume-icon">
           <img src="images/icons/volume-full.png" alt="volume" />
         </a>
+
         <input
           type="range"
           min="0"
@@ -511,7 +515,7 @@
           class="slider"
         />
       </div>
-    </section>
+    </div>
 
     <div class="playlist-warning">
       <h3>Enjoy your Liked Songs</h3>
@@ -541,9 +545,11 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
-    <script src="utilityFunctions.js"></script>
-    <script src="playlist.js"></script>
-    <script src="general.js"></script>
-    <script src="colorthief.js"></script>
+    <script src="js/utilityFunctions.js"></script>
+    <script src="js/playlist.js"></script>
+    <script src="js/general.js"></script>
+    <script src="js/colorthief.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/warnings.js"></script>
   </body>
 </html>

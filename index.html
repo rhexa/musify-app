@@ -122,7 +122,7 @@
                       <i id="playsong" class="fas fa-play"></i>
                     </div>
                     <div class="card-info">
-                      <div class="card-artist-name">Jacky Jack</div>
+                      <div class="card-artist-name">Sinan Erenler</div>
                       <div class="card-song-name">I am awesome</div>
                     </div>
                   </div>
@@ -946,16 +946,19 @@
 
       <div class="media-part">
         <div class="media-buttons">
-          <a class="random" href="#"><i class="fas fa-random"></i></a>
+          <button class="random" href="#"><i class="fas fa-random"></i></button>
           <div class="main-media-buttons">
-            <a href="#" class="prev"><i class="fas fa-step-backward"></i></a>
-            <a href="#" class="play"><i class="fas fa-play-circle"></i></a>
-            <a href="#" class="prev"><i class="fas fa-step-forward"></i></a>
+            <button href="#" class="prev">
+              <i class="fas fa-step-backward"></i>
+            </button>
+            <button class="play"><i class="fas fa-play-circle"></i></button>
+            <button class="next"><i class="fas fa-step-forward"></i></button>
           </div>
-          <a href="#" class="replay">
+          <button href="#" class="replay">
             <i class="fas fa-sync-alt"></i>
-          </a>
+          </button>
         </div>
+        <audio id="music" class="music" src="musics/1.mp3"></audio>
         <div class="progress-part">
           <span class="counter">01:24</span>
           <div class="progress-bar">
@@ -996,9 +999,11 @@
     </div>
 
     <!-- <div id="message" class="fadein normal">Hepinizi sikerim</div> -->
-    <script src="utilityFunctions.js"></script>
-    <script src="general.js"></script>
-    <script src="category.js"></script>
-    <script src="home.js"></script>
+    <script src="js/utilityFunctions.js"></script>
+    <script src="js/general.js"></script>
+    <script src="js/category.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/warnings.js"></script>
   </body>
 </html>

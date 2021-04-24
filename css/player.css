@@ -40,8 +40,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to right, transparent, var(--player-bg));
-  backdrop-filter: blur(50px);
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.7),
+    var(--player-bg)
+  );
+  backdrop-filter: blur(100px);
 }
 
 .artist-info-inner * {
@@ -96,16 +100,20 @@
   margin-bottom: 10px;
 }
 
-.media-buttons a {
+.media-buttons i {
+  font-size: 20px;
+}
+
+.media-buttons button {
+  background: transparent;
+  color: var(--i-color);
+  border: none;
+  cursor: pointer;
   transition: all 0.4s ease;
 }
 
-.media-buttons a:hover {
+.media-buttons button:hover {
   color: var(--btn-white-bg);
-}
-
-.media-buttons i {
-  font-size: 20px;
 }
 
 .play i {
@@ -142,9 +150,10 @@
 
 .progress-bar .bar {
   height: 100%;
-  width: 40%;
+  width: 0;
   background: var(--bar-color);
   border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
 .progress-bar .circle {
@@ -155,8 +164,8 @@
   background: var(--circle-color);
   top: 50%;
   left: calc(40% - 5px);
-  transition: all 0.2s ease;
-  transform: translateY(-50%) scale(0);
+  transition: all 0.3s ease;
+  transform: translate(-5px, -50%) scale(0);
 }
 
 .progress-bar:hover .circle {
