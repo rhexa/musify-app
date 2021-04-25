@@ -2,14 +2,14 @@ const editPlaylist = document.querySelector(".edit-playlist");
 const playlistName = document.querySelector(".playlist-name");
 const editPlaylistName = document.getElementById("playlist-name-input");
 const uploadimage = document.querySelectorAll(".upload-playlist-pic");
-const img = document.querySelector(".playlist-cover-pic");
+
 const coverPic = document.querySelectorAll(".playlist-cover-pic");
 const musicIcon = document.querySelectorAll(".fa-music");
+const symbol = document.querySelector(".playlist-card-symbol");
 
 // Upload image
 uploadimage.forEach((item) => {
   item.addEventListener("change", () => {
-    console.log(uploadimage);
     const file = item.files[0];
 
     if (file) {
@@ -17,9 +17,19 @@ uploadimage.forEach((item) => {
 
       reader.addEventListener("load", function () {
         coverPic.forEach((pic, index) => {
-          pic.style.display = "block";
           musicIcon[index].style.display = "none";
           pic.setAttribute("src", this.result);
+          pic.style.display = "block";
+
+          // If the loop on the cover pic add the eventlistener
+          if (index === 0) {
+            // Set symbol to block
+            symbol.style.display = "block";
+            // Call the function after image is loaded
+            pic.onload = () => {
+              setColor(pic);
+            };
+          }
         });
       });
 
@@ -58,24 +68,25 @@ editPlaylistName.addEventListener("keyup", (e) => {
   playlistName.textContent = e.target.value;
 });
 
-function setColor(img) {
+// Function that generates the average color of the image
+function setColor(pic) {
   const colorThief = new ColorThief();
-  // const img = document.querySelector(".playlist-img-wrap img");
+
+  console.log(pic.complete);
 
   let color = {};
 
   // Make sure image is finished loading
-  if (img.complete) {
-    // color = colorThief.getPalette(img)[8];
-    color = colorThief.getColor(img);
+  if (pic.complete) {
+    color = colorThief.getColor(pic);
+    console.log(color);
     document.body.style.backgroundImage = `
   linear-gradient(0deg, #000 30%, rgb(${color[0]},${color[1]},${color[2]}))
   `;
   } else {
     window.addEventListener("load", function () {
-      // color = colorThief.getPalette(img)[8];
-      color = colorThief.getColor(img);
-
+      color = colorThief.getColor(pic);
+      console.log(color);
       document.body.style.backgroundImage = `
   linear-gradient(0deg, #000 30%, rgb(${color[0]},${color[1]},${color[2]}))
   `;

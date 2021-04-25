@@ -3,6 +3,16 @@
   position: relative;
 }
 
+.playlist-img-wrap .playlist-card-symbol {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0.5;
+  display: none;
+}
+
 .edit-details-img-wrap > i,
 .playlist-img-wrap > i {
   font-size: 70px;
@@ -17,10 +27,6 @@
 .edit-details-img-wrap:hover > i,
 .playlist-img-wrap:hover > i {
   opacity: 0;
-}
-
-.playlist-img-wrap img {
-  display: none;
 }
 
 .playlist-name {
