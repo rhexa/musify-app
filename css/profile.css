@@ -20,36 +20,6 @@
   position: relative;
 }
 
-.profile-pic-wrap label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  font-size: 18px;
-  align-items: center;
-  justify-content: center;
-  color: var(--btn-white-bg);
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.profile-pic-wrap label:hover {
-  opacity: 1;
-}
-
-.profile-pic-wrap label i {
-  font-size: 40px;
-}
-
-#upload-profile-pic {
-  display: none;
-}
-
 .profile-details {
   display: flex;
   flex-direction: column;
@@ -73,6 +43,10 @@
   margin-right: 20px;
 }
 
+.profile-row-full-width {
+  width: 100% !important;
+}
+
 .profile-row {
   display: flex;
   align-items: center;
@@ -80,49 +54,40 @@
   margin: 20px 0;
 }
 
+.profile-pp-click {
+  margin-right: 30px;
+}
+
+.profile-pp-click:last-child {
+  margin-right: 0;
+}
+
 .profile-pp {
-  width: 200px;
-  height: 250px;
+  width: 180px;
+  height: 230px;
   background: var(--dark-bg-l);
   border-radius: 10px;
   padding-top: 20px;
   transition: all 0.3s ease;
-  position: relative;
   overflow: hidden;
 }
 
-.profile-pp:hover i {
-  opacity: 1;
-  top: 130px;
+.profile-pp-wrap {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  position: relative;
 }
 
-.profile-pp i {
-  position: absolute;
-  top: 140px;
-  left: 30px;
-  z-index: 10;
-  width: 40px;
-  height: 40px;
-  background: var(--btn-green);
-  color: var(--btn-white-bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  opacity: 0;
-  transition: all 0.3s ease;
+.profile-pp:hover #playsong {
+  opacity: 1;
+  bottom: 10px;
 }
 
 .profile-pp:hover {
   background: var(--dark-bg-l-hover);
-}
-
-.profile-pp-wrap {
-  width: 160px;
-  height: 160px;
-  border-radius: 10px;
-  overflow: hidden;
-  margin: 0 auto 20px;
 }
 
 .profile-pp-title {

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Music Streaming Website" />
+    <meta name="keywords" content="music, streaming, music streaming" />
+    <meta
+      name="author"
+      content="Cihan Erenler, Daniel Kovacs, Rachmad Fauzan"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/createPlaylist.css" />
+    <title>Musify</title>
+    <link
+      rel="shortcut icon"
+      href="images/symbol-green.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <!-- Container starts here -->
+    <section class="container">
+      <!-- Side starts here -->
+      <side id="side">
+        <div class="side-content">
+          <div class="logo-wrap">
+            <a id="logo" href="#"><img src="images/Logo.svg" alt="logo" /></a>
+          </div>
+          <ul>
+            <li class="active">
+              <div class="side-group">
+                <a href=""><i class="fas fa-home"></i>Home</a>
+              </div>
+            </li>
+            <li>
+              <div class="side-group">
+                <a href=""><i class="fas fa-search"></i>Search</a>
+              </div>
+            </li>
+            <li>
+              <div class="side-group">
+                <a href=""><i class="fas fa-book-open"></i>Library</a>
+              </div>
+            </li>
+            <li>
+              <div class="side-group liked-songs-wrap">
+                <a class="liked-songs" href="javascript:void(0)"
+                  ><i class="fas fa-heart"></i>Liked Songs</a
+                >
+              </div>
+            </li>
+            <li>
+              <div class="side-group">
+                <a href="javascript:void(0)" class="create-playlist-btn"
+                  ><i class="fas fa-plus"></i>Create Playlist</a
+                >
+              </div>
+            </li>
+          </ul>
+          <hr />
+          <h3 class="playlists-title">Playlists</h3>
+        </div>
+      </side>
+      <!-- Side ends here -->
+
+      <!-- Main area starts here -->
+      <main id="main-area" class="main-area">
+        <!-- Main nav starts -->
+        <nav class="main-navbar">
+          <div class="main-container flex-right">
+            <div class="btn-group">
+              <a href="#" class="btn btn-signup">Sign up</a>
+              <a href="login.html" class="btn btn-white">Log in</a>
+            </div>
+          </div>
+        </nav>
+        <!-- Main nav ends -->
+
+        <!-- Playlist Info Starts here -->
+        <section class="playlist-info-sec">
+          <div class="main-container playlist-container">
+            <div class="playlist-img-wrap create-playlist-img-wrap">
+              <img class="playlist-cover-pic" src="" alt="cover" />
+              <i class="fas fa-music"></i>
+              <label for="upload-playlist-pic-1" class="pl-pic-upload">
+                <i class="fas fa-pencil-alt"></i>
+                Choose photo
+                <input
+                  type="file"
+                  name="upload-playlist-pic"
+                  id="upload-playlist-pic-1"
+                  class="upload-playlist-pic"
+                />
+              </label>
+            </div>
+            <div class="playlist-info">
+              <div class="label">Playlist</div>
+              <h1 id="playlist-name" class="playlist-name">My Playlist#2</h1>
+              <div class="playlist-details">
+                <a href="#" class="creator-name">Cihan Erenler</a>
+                <button class="btn green-btn">Save Playlist</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Playlist info ends here -->
+
+        <!-- Search song starts here -->
+        <section class="search-music main-container">
+          <h2>Let's find something for your playlist</h2>
+          <div class="search-input-wrap">
+            <i class="fas fa-search"></i>
+            <input type="text" class="search-input" />
+            <i id="delete-input" class="fas fa-times"></i>
+          </div>
+        </section>
+        <!-- Search song ends here  -->
+
+        <!-- Playlist ends here  -->
+      </main>
+      <!-- Main ends here -->
+    </section>
+    <!-- Container ends here -->
+
+    <section class="edit-playlist">
+      <div class="edit-playlist-card">
+        <i id="times" class="fas fa-times"></i>
+        <h2>Edit details</h2>
+        <div class="edit-details-wrap">
+          <div class="edit-details-img-wrap">
+            <i class="fas fa-music"></i>
+            <img class="playlist-cover-pic" src="" alt="" />
+            <label for="upload-playlist-pic-2" class="pl-pic-upload">
+              <i class="fas fa-pencil-alt"></i>
+              Choose photo
+              <input
+                type="file"
+                name="upload-playlist-pic"
+                id="upload-playlist-pic-2"
+                class="upload-playlist-pic"
+              />
+            </label>
+          </div>
+          <div class="edit-details-content">
+            <div class="edit-playlist-name">
+              <input
+                type="text"
+                name="playlist-name-input"
+                id="playlist-name-input"
+              />
+              <span class="edit-playlist-name-label"> Name </span>
+            </div>
+            <div class="edit-playlist-desctiption">
+              <textarea
+                name="playlist-description-input"
+                id="playlist-description-input"
+              ></textarea>
+              <span class="edit-playlist-description-label">Description </span>
+            </div>
+          </div>
+        </div>
+        <div class="edit-playlist-btn">
+          <div></div>
+          <button class="btn btn-white">save</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Player starts here -->
+    <div id="player">
+      <div class="artist-info">
+        <div class="artist-info-img-wrap">
+          <img
+            src="images/8.jpg"
+            alt="music-info-image"
+            class="artist-info-bg"
+          />
+        </div>
+        <div class="artist-info-inner">
+          <div class="artist-info-inner-img-wrap">
+            <img src="images/8.jpg" alt="emily" />
+          </div>
+          <div class="artist-song-info">
+            <h4 class="artist-name">Emily</h4>
+            <p class="song-name">Life is awesome</p>
+          </div>
+          <a class="artist-info-liked liked" href="javascript:void(0)"
+            ><i class="fas fa-heart"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="media-part">
+        <div class="media-buttons">
+          <button class="random" href="#"><i class="fas fa-random"></i></button>
+          <div class="main-media-buttons">
+            <button href="#" class="prev">
+              <i class="fas fa-step-backward"></i>
+            </button>
+            <button class="play"><i class="fas fa-play-circle"></i></button>
+            <button class="next"><i class="fas fa-step-forward"></i></button>
+          </div>
+          <button href="#" class="replay">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+        </div>
+        <audio id="music" class="music" src="musics/1.mp3"></audio>
+        <div class="progress-part">
+          <span class="counter">01:24</span>
+          <div class="progress-bar">
+            <div class="bar"></div>
+            <div class="circle"></div>
+          </div>
+          <span class="total">03:18</span>
+        </div>
+      </div>
+
+      <div class="volume-part">
+        <a href="#"><i class="fas fa-list-ul"></i></a>
+        <a href="#" class="volume-icon">
+          <img src="images/icons/volume-full.png" alt="volume" />
+        </a>
+
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          id="myrange"
+          class="slider"
+        />
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+    <script src="js/utilityFunctions.js"></script>
+    <script src="js/general.js"></script>
+    <script src="js/createPlaylist.js"></script>
+    <!-- <script src="js/colorthief.js"></script> -->
+    <script src="js/player.js"></script>
+  </body>
+</html>

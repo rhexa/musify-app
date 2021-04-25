@@ -1,5 +1,5 @@
 const colorThief = new ColorThief();
-const img = document.querySelector(".playlist-img-wrap img");
+// const img = document.querySelector(".playlist-img-wrap img");
 
 let color = {};
 

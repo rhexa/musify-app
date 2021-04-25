@@ -176,16 +176,16 @@ random.addEventListener("click", () => {
   RANDOM ? (RANDOM = false) : (RANDOM = true);
 });
 
-document.body.onkeyup = function (e) {
-  if (e.keyCode == 32) {
-    const isPlaying = player.classList.contains("playingrightnow");
-    if (isPlaying) {
-      pauseAudioSong();
-    } else {
-      playAudioSong();
-    }
-  }
-};
+// document.body.onkeyup = function (e) {
+//   if (e.keyCode == 32) {
+//     const isPlaying = player.classList.contains("playingrightnow");
+//     if (isPlaying) {
+//       pauseAudioSong();
+//     } else {
+//       playAudioSong();
+//     }
+//   }
+// };
 
 volSlider.addEventListener("input", () => {
   music.volume = volSlider.value / 100;
