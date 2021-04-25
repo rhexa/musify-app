@@ -9,52 +9,6 @@
   background: rgba(0, 0, 0, 0.2);
 }
 
-.playlist-container {
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-}
-
-.playlist-info-sec .playlist-container {
-  display: grid;
-  grid-template-columns: 250px 1fr;
-  margin-bottom: 20px;
-}
-
-.playlist-img-wrap {
-  width: 250px;
-  height: 250px;
-  border-radius: 5px;
-  overflow: hidden;
-  -webkit-box-shadow: 1px 0px 31px -13px #000000;
-  box-shadow: 1px 0px 21px -13px #000000;
-}
-
-.playlist-info {
-  padding: 50px 20px 20px;
-}
-
-.playlist-name {
-  font-size: 55px;
-  color: var(--btn-white-bg);
-}
-
-.playlist-details {
-  color: var(--circle-color);
-  margin: 10px 0;
-  display: flex;
-  align-items: center;
-}
-
-.playlist-details i {
-  font-size: 5px;
-  margin: 0 10px;
-}
-
-.creator-name {
-  color: var(--btn-white-bg);
-}
-
 .playlist-info-buttons {
   height: 40px;
   display: flex;

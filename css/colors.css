@@ -17,10 +17,12 @@
   --moz-card-hover: #1d1d1d;
   --radio-border: #b3b3b3;
   --radio-checked: #72c972;
-  --line: rgba(151, 151, 151, 0.3);
+  --line: #9797974d;
   --btn-green: #2aaf2a;
   --btn-green-hover: #3c943c;
-  --dark-bg: #2c2c2c;
-  --dark-bg-l: #1d1d1d;
-  --dark-bg-l-hover: #1b1b1b;
+  --dark-bg: #181818;
+  --dark-bg-l: #222222;
+  --dark-bg-l-hover: #2e2e2e;
+  --darker: #111111;
+  --lighter: #3a3a3a;
 }

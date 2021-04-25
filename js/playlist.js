@@ -3,6 +3,7 @@ const mainNav = document.querySelector(".main-navbar");
 const playlist = document.getElementById("playlist");
 const playlistSongs = document.getElementById("playlist-songs");
 const likePlaylist = document.querySelector(".like-playlist i");
+const img = document.querySelector(".playlist-img-wrap img");
 const likedPlaylistWarning = document.querySelector(".liked-playlist-warning");
 const playlistsongmore = document.querySelectorAll(".playlist-song-more");
 const songMoreOptionOp = document.querySelectorAll(".song-more-option-op");
