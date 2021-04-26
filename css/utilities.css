@@ -96,8 +96,9 @@
 }
 
 .label {
-  color: var(--circle-color);
+  color: var(--normal);
   text-transform: uppercase;
+  text-shadow: 0px 0px 19px rgba(0, 0, 0, 1);
 }
 
 /* Row header */
