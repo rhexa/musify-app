@@ -9,28 +9,26 @@ const playlistsongmore = document.querySelectorAll(".playlist-song-more");
 const songMoreOptionOp = document.querySelectorAll(".song-more-option-op");
 
 // Make the label row sticky when it reaches to the top of the page on a scroll event
-playlist.onscroll = function () {
-  stickIt();
-};
+// playlist.onscroll = function () {
+//   stickIt();
+// };
 
-let sticky = labelHeader.offsetTop;
-function stickIt() {
-  console.log(sticky);
-  if (playlist.scrollTop > sticky) {
-    labelHeader.classList.add("sticky-label");
-    mainNav.style.background = "rgba(0, 0, 0, 0.76)";
-  } else {
-    labelHeader.classList.remove("sticky-label");
-    mainNav.style.background = "rgba(0, 0, 0, 0.2)";
-  }
-}
+// let sticky = labelHeader.offsetTop;
+// function stickIt() {
+//   console.log(sticky);
+//   if (playlist.scrollTop > sticky) {
+//     labelHeader.classList.add("sticky-label");
+//     mainNav.style.background = "rgba(0, 0, 0, 0.76)";
+//   } else {
+//     labelHeader.classList.remove("sticky-label");
+//     mainNav.style.background = "rgba(0, 0, 0, 0.2)";
+//   }
+// }
 
 // **********EVENT LİSTENERS**********
 // This function activates the sound vawe animation when the play button on song element is clicked.
 playlistSongs.addEventListener("click", (e) => {
-  console.log(e.target.parentElement);
   if (e.target.parentElement.classList.contains("playlist-song-play-btn")) {
-    console.log("girdi");
     e.target.parentElement.parentElement
       .querySelector(".playing-animation")
       .classList.toggle("active-playing-animation");
@@ -43,11 +41,6 @@ playlistSongs.addEventListener("click", (e) => {
     e.target.classList.remove("fa-pause");
     e.target.classList.add("fa-play");
   }
-});
-
-// Show the login warning if the user click the like button on a playlist.
-likePlaylist.addEventListener("click", () => {
-  likedPlaylistWarning.classList.add("liked-playlist-warning-show");
 });
 
 // Close the login warning when the escape key is pressed
@@ -69,6 +62,7 @@ playlistsongmore.forEach((item) => {
   //Iterate through each item and add click eventlistener to each one
   item.addEventListener("click", (e) => {
     const i = e.target.nextElementSibling;
+    console.log("girdi");
     removeMoreList();
     i.classList.toggle("song-more-options-show");
   });

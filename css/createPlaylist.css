@@ -175,12 +175,18 @@
 .create-playlist-list {
   background: rgba(0, 0, 0, 0.2);
   min-height: 520px;
-  padding: 20px 0 80px;
+  padding: 0 0 80px;
 }
 
 .search-music h2 {
   color: var(--btn-white-bg);
   margin-bottom: 20px;
+  padding-top: 10px;
+}
+
+.underline {
+  margin: 0 50px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .search-input-wrap {
@@ -288,3 +294,8 @@
   color: var(--line);
   font-size: 26px;
 }
+
+/* Added song list */
+/* .playlist-songs {
+  padding-top: 10px;
+} */
