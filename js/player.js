@@ -109,6 +109,13 @@ const songs = [
     name: "Trees",
     img: "a15.jpg",
   },
+  {
+    id: "16",
+    artist: "Kimochii",
+    src: "a16.mp3",
+    name: "Mona Wonderlick",
+    img: "a16.jpg",
+  },
 ];
 
 let current = 0;

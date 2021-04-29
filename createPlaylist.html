@@ -17,6 +17,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/playlist.css" />
     <link rel="stylesheet" href="css/createPlaylist.css" />
     <title>Musify</title>
     <link
@@ -88,6 +89,40 @@
         <section class="playlist-info-sec">
           <div class="main-container playlist-container">
             <div class="playlist-img-wrap create-playlist-img-wrap">
+              <div class="four-images">
+                <div class="two-images">
+                  <div class="one-image">
+                    <img
+                      src="song-covers/a1.jpg"
+                      class="image-1"
+                      alt="4-images"
+                    />
+                  </div>
+                  <div class="one-image">
+                    <img
+                      src="song-covers/a2.jpg"
+                      class="image-3"
+                      alt="4-images"
+                    />
+                  </div>
+                </div>
+                <div class="two-images">
+                  <div class="one-image">
+                    <img
+                      src="song-covers/a3.jpg"
+                      class="image-2"
+                      alt="4-images"
+                    />
+                  </div>
+                  <div class="one-image">
+                    <img
+                      src="song-covers/a4.jpg"
+                      class="image-4"
+                      alt="4-images"
+                    />
+                  </div>
+                </div>
+              </div>
               <img
                 src="images/Symbol.png"
                 alt=""
@@ -123,6 +158,24 @@
         </section>
         <!-- Playlist info ends here -->
 
+        <div class="playlist-list-label">
+          <div class="label-inner">
+            <p class="playlist-play-label"></p>
+            <p class="playlist-index-label">#</p>
+            <p class="playlist-title-label">Title</p>
+            <p class="playlist-playing-label"></p>
+            <p class="playlist-album-label">Album</p>
+            <p class="playlist-date-added-label">Date added</p>
+            <p class="playlist-liked-label"></p>
+            <p class="playlist-song-lengths">
+              <i class="far fa-clock"></i>
+            </p>
+          </div>
+        </div>
+        <div id="playlist-list" class="playlist-list">
+          <section id="playlist-songs" class="playlist-songs"></section>
+        </div>
+
         <!-- Search song starts here -->
         <section class="create-playlist-list">
           <div class="display-added-songs"></div>
@@ -134,21 +187,7 @@
               <i id="delete-input" class="fas fa-times"></i>
             </div>
           </section>
-          <section class="filtered-songs main-container">
-            <!-- <div class="filtered-song" data-id="">
-              <div class="filtered-song-img-wrap">
-                <i class="fas fa-play play-filtered-song"></i>
-                <img src="images/11.jpg" alt="s" />
-              </div>
-              <div class="filtered-song-info-wrap">
-                <h3 class="filtered-song-name">Ay yüzlüm</h3>
-                <p class="filtered-artist-name">Cihan Erenler</p>
-              </div>
-              <div class="filtered-song-btn">
-                <button class="btn">Add</button>
-              </div>
-            </div>
-          </section> -->
+          <section class="filtered-songs main-container"></section>
         </section>
         <!-- Search song ends here  -->
 
@@ -271,8 +310,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
     <script src="js/utilityFunctions.js"></script>
     <script src="js/general.js"></script>
+    <script src="js/playlist.js"></script>
     <script src="js/createPlaylist.js"></script>
-    <!-- <script src="js/colorthief.js"></script> -->
     <script src="js/player.js"></script>
   </body>
 </html>

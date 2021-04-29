@@ -15,9 +15,9 @@
   },
   {
     "id": "3",
-    "artist": "Declan",
+    "artist": "Relaxed Guys",
     "src": "a3.mp3",
-    "name": "All Night",
+    "name": "Relaxing Music",
     "img": "a3.jpg"
   },
   {
@@ -103,5 +103,12 @@
     "src": "a15.mp3",
     "name": "Trees",
     "img": "a15.jpg"
+  },
+  {
+    "id": "16",
+    "artist": "Kimochii",
+    "src": "a16.mp3",
+    "name": "Mona Wonderlick",
+    "img": "a16.jpg"
   }
 ]
