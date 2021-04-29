@@ -299,3 +299,18 @@
 /* .playlist-songs {
   padding-top: 10px;
 } */
+
+/* 4 images */
+.four-images {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  display: none;
+}
+
+.one-image {
+  width: 125px;
+  height: 125px;
+}
