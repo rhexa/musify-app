@@ -20,10 +20,10 @@ const music = document.getElementById("music");
 // Songs
 const songs = [
   {
-    artist: "Vendredi",
+    artist: "Aşık Celali",
     src: "a1.mp3",
-    name: "When Winter Rises",
-    img: "a1.jpg",
+    name: "Tombul Memeler",
+    img: "celal.jpg",
   },
   {
     artist: "Scandinavianz",

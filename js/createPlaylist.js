@@ -13,6 +13,10 @@ const image1 = document.querySelector(".image-1");
 const image2 = document.querySelector(".image-2");
 const image3 = document.querySelector(".image-3");
 const image4 = document.querySelector(".image-4");
+const ply = document.getElementById("dev-mus");
+
+// Global variables
+let isSet = false;
 
 // Objects
 const colorThief = new ColorThief();
@@ -30,6 +34,7 @@ uploadimage.forEach((item) => {
           musicIcon[index].style.display = "none";
           pic.setAttribute("src", this.result);
           pic.style.display = "block";
+          isSet = true;
 
           // If the loop index on the cover pic equals to 0 add eventlistener
           if (index === 0) {
@@ -179,8 +184,9 @@ function generateSong(list) {
           });
         }
 
-        //if the number of the songs equals to 4 or more change the cover pic to collage
-      } else if (playlistSongs.children.length >= 4) {
+        //if the number of the songs equals to 4 or more
+        //and the isSet variable is not true create the collage
+      } else if (playlistSongs.children.length >= 4 && !isSet) {
         const listsongs = playlistSongs.querySelectorAll(".playlist-song");
 
         coverPic.forEach((pic) => {
@@ -231,6 +237,7 @@ function generateSong(list) {
   });
 }
 
+//This function returns rgb color values of the given 4 images
 function getColors(img1, img2, img3, img4) {
   let color1, color2, color3, color4;
 
@@ -306,7 +313,7 @@ function clearPlaylistSongAnimation() {
 
     if (i.classList.contains("active-playing-animation")) {
       i.classList.remove("active-playing-animation");
-      const btn = document.querySelector(".playlist-song-play-btn i");
+      const btn = item.querySelector(".playlist-song-play-btn i");
       btn.classList.remove("fa-pause");
       btn.classList.add("fa-play");
     }
@@ -351,7 +358,7 @@ function addedSong(x, isPlaying) {
                   <div class="playlist-song-like-icon">
                     <i class="fas fa-heart"></i>
                   </div>
-                  <div class="playlist-song-length">2:54</div>
+                  <div class="playlist-song-length">56</div>
                   <div class="song-more-button">
                     <a href="#" class="playlist-song-more">
                       <i class="fas fa-ellipsis-h"></i>
@@ -425,9 +432,8 @@ window.addEventListener("click", (e) => {
   }
 
   if (e.target.parentElement.classList.contains("playlist-song-play-btn")) {
-    const item = e.target.parentElement.parentElement.querySelector(
-      ".playing-animation"
-    );
+    const item =
+      e.target.parentElement.parentElement.querySelector(".playing-animation");
 
     if (!item.classList.contains("active-playing-animation")) {
       makePlayerIconPlay();
@@ -438,17 +444,20 @@ window.addEventListener("click", (e) => {
       player.classList.add("playingrightnow");
       const audiosrc = music.src.split("/")[music.src.split("/").length - 1];
       const selectedSongs = getAllSelectedFromStorage();
-      const id = e.target.parentElement.parentElement.parentElement.getAttribute(
-        "data-id"
-      );
+      const id =
+        e.target.parentElement.parentElement.parentElement.getAttribute(
+          "data-id"
+        );
       const song = selectedSongs.find((s) => s.id === id);
-
-      console.log(song);
 
       if (isSongPlayin(audiosrc, song.src)) {
         music.play();
+        e.target.classList.remove("fa-play");
+        e.target.classList.add("fa-pause");
       } else {
         clearPlaylistSongAnimation();
+        e.target.classList.remove("fa-play");
+        e.target.classList.add("fa-pause");
         createPlaylistSetSong(song);
         music.play();
       }
