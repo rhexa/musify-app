@@ -1,0 +1,29 @@
+{
+  "name": "musify-app-server",
+  "version": "1.0.0",
+  "description": "Backend for musify app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rhexa/musify-app"
+  },
+  "keywords": [
+    "Music",
+    "server",
+    "Streaming"
+  ],
+  "author": "Rhexa",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "bugs": {
+    "url": "https://github.com/rhexa/musify-app/issues"
+  },
+  "homepage": "https://github.com/rhexa/musify-app#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
