@@ -124,7 +124,7 @@ let PAUSE = false;
 
 // *********FUNCTIONS***********
 // to retrieve songs
-const endPointURL = 'http://localhost:3000'
+const endPointURL = require('../env').endPointURL
 
 // set the song informations
 function setAudioSong(x) {
