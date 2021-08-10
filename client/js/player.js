@@ -123,15 +123,17 @@ let RANDOM = false;
 let PAUSE = false;
 
 // *********FUNCTIONS***********
+// to retrieve songs
+const endPointURL = 'http://localhost:3000'
 
 // set the song informations
 function setAudioSong(x) {
-  music.src = `musics/${x.src}`;
+  music.src = `${endPointURL}/songs/${x.src}`;
   artistName.textContent = x.artist;
   songName.textContent = x.name;
-  artistImage.src = `song-covers/${x.img}`;
-  artistInfoBg.src = `song-covers/${x.img}`;
-  artistInfoBg.style.background = `url("song-covers/${x.img}") no-repeat center center/cover`;
+  artistImage.src = `${endPointURL}/thumbnails/${x.img}`;
+  artistInfoBg.src = `${endPointURL}/thumbnails/${x.img}`;
+  artistInfoBg.style.background = `url("${endPointURL}/thumbnails/${x.img}") no-repeat center center/cover`;
 }
 
 // Play the song
