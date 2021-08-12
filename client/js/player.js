@@ -19,7 +19,7 @@ const music = document.getElementById("music");
 
 // Songs
 // to retrieve songs
-const endPointURL = require('../env').endPointURL
+const endPointURL = "http://localhost:3000"
 
 const songs = (async () => {
   const res = await fetch(`${endPointURL}/api/songs`)
