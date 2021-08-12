@@ -21,11 +21,13 @@ const music = document.getElementById("music");
 // to retrieve songs
 const endPointURL = "http://localhost:3000"
 
-const songs = (async () => {
+let songs;
+const getSongs = async () => {
   const res = await fetch(`${endPointURL}/api/songs`)
-  const songs = await res.json()
-  return songs
-}) ()
+  const data = await res.json()
+  songs = data
+  setAudioSong(songs[current])
+}
 
 // const songs = [
 //   {
@@ -222,7 +224,7 @@ function setProgress(e) {
 }
 
 //**********EVENT LISTENERS*********/
-window.addEventListener("load", setAudioSong(songs[current]));
+window.addEventListener("load", getSongs());
 play.addEventListener("click", () => {
   const isPlaying = player.classList.contains("playingrightnow");
   if (isPlaying) {
